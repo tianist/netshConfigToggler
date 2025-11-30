@@ -1,4 +1,4 @@
-Wi-Fi AutoConfig Toggle Script (toggle_autoconfig.bat)
+Wi-Fi AutoConfig Toggle Script (Wifi Toggle.bat)
 
 This is a versatile Windows Batch script that simplifies the process of toggling the "Auto Configuration Logic" for any selected Wi-Fi interface using the netsh wlan command.
 
@@ -39,5 +39,6 @@ Dynamic Retrieval: It uses a dynamic variable retrieval method (call set) to saf
 Status Check: It executes netsh wlan show settings and uses findstr /I "enabled" to check the current status for the selected interface name.
 
 If "enabled" is found (ERRORLEVEL 0): The status is ENALED. The script runs netsh wlan set autoconfig enabled=no.
+
 
 If "enabled" is NOT found (ERRORLEVEL 1): The status is DISABLED. The script runs netsh wlan set autoconfig enabled=yes.
